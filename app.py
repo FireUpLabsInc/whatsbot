@@ -1,8 +1,16 @@
 from flask import Flask, request
 import requests
+from twilio.rest import Client
 from twilio.twiml.messaging_response import MessagingResponse
 
 app = Flask(__name__)
+account = "ACbf0d1f34d6a20c5ae91ac541b87e3999"
+token = "a71041bfe3d469782de71062caf9f56c"
+client = Client(account, token)
+
+@app.route("/")
+def hello():
+    return "Hello, World!"
 
 
 @app.route('/bot', methods=['POST'])
@@ -29,6 +37,12 @@ def bot():
         msg.body('I only know about famous quotes and cats, sorry!')
     return str(resp)
 
+@app.route('/sendMsg', methods=['POST'])
+def send_msg():
+
+
+
+
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True ,port=8080,use_reloader=False)

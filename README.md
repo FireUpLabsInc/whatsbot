@@ -1,6 +1,8 @@
 # whatsbot
 A Whatsapp bot built with Python Flask + Twilio API 
 
+https://www.twilio.com/blog/build-a-whatsapp-chatbot-with-python-flask-and-twilio
+
 ## Requirements
 
   `Python 3.6 or newer:` If your operating system does not provide a Python interpreter, go to python.org and download from the link [here!](https://www.python.org/downloads/)<br/>
