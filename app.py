@@ -39,6 +39,7 @@ def bot():
 
 @app.route('/sendMsg', methods=['POST'])
 def send_msg():
+    return
 
 
 
